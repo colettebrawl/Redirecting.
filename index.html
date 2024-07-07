@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // JavaScript om het bestand link.txt te laden en door te verwijzen
-        fetch('link.txt') // Fetch het bestand link.txt
-            .then(response => response.text()) // Converteer de response naar tekst
+        fetch('link.txt')
+            .then(response => response.text())
             .then(url => {
-                // Als de URL correct is, doorverwijzen naar die URL
                 if (url.trim().length > 0) {
-                    window.location.href = url.trim(); // Doorverwijzen naar de URL
+                    window.location.href = url.trim();
                 } else {
                     console.error('Error: link.txt is leeg of bevat geen geldige URL.');
                 }
